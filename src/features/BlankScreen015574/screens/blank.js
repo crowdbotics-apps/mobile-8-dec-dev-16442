@@ -77,8 +77,8 @@ const styles = StyleSheet.create({
   Button_8: {},
   TextInput_9: {},
   View_10: { flexDirection: "row" },
-  View_11: { width: 17 },
-  View_12: { width: 104 },
+  View_11: { width: 66 },
+  View_12: { width: 55 },
   View_13: {},
   View_14: {},
   View_15: {}
