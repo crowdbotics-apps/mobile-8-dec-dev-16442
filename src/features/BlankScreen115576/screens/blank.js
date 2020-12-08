@@ -24,7 +24,7 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { CheckBox_2: true, CheckBox_4: true }
+  state = { CheckBox_2: false, CheckBox_4: false }
 
   render = () => (
     <View>
