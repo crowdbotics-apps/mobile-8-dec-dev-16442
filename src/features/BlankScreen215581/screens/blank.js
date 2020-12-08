@@ -26,7 +26,15 @@ export default class Blank extends React.Component {
 
   state = {}
 
-  render = () => <View />
+  render = () => (
+    <View>
+      <Button
+        title="Press me!"
+        color="#43dbc9"
+        onPress={() => alert("Pressed!")}
+      />
+    </View>
+  )
 }
 
-const styles = StyleSheet.create({ View_1: {} })
+const styles = StyleSheet.create({ View_1: {}, Button_2: {} })
