@@ -38,7 +38,7 @@ export default class Blank extends React.Component {
       <TouchableOpacity
         onPress={() => this.props.navigation.navigate("SignupScreen315578")}
       >
-        <Icon name="star" />
+        <Icon name="star" style={styles.Icon_3} />
       </TouchableOpacity>
       <CheckBox
         title="Checkbox"
@@ -52,6 +52,16 @@ export default class Blank extends React.Component {
 const styles = StyleSheet.create({
   View_1: {},
   CheckBox_2: {},
-  Icon_3: {},
+  Icon_3: {
+    width: 100,
+    height: 100,
+    alignSelf: "center",
+    borderStyle: "dotted",
+    borderWidth: 4,
+    borderLeftWidth: 4,
+    borderRightWidth: 4,
+    borderTopWidth: 4,
+    borderBottomWidth: 4
+  },
   CheckBox_4: {}
 })
