@@ -24,7 +24,7 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { Switch_2: true }
+  state = { Switch_2: true, Switch_3: true, Switch_4: true }
 
   render = () => (
     <View>
@@ -34,11 +34,25 @@ export default class Blank extends React.Component {
         value={this.state.Switch_2}
         onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
       />
+      <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
+        style={styles.Switch_3}
+        value={this.state.Switch_3}
+        onValueChange={nextChecked => this.setState({ Switch_3: nextChecked })}
+      />
+      <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
+        style={styles.Switch_4}
+        value={this.state.Switch_4}
+        onValueChange={nextChecked => this.setState({ Switch_4: nextChecked })}
+      />
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   View_1: {},
-  Switch_2: { overflow: "visible", alignSelf: "flex-start" }
+  Switch_2: { alignSelf: "flex-start" },
+  Switch_3: { overflow: "scroll", alignSelf: "flex-start" },
+  Switch_4: { overflow: "scroll", alignSelf: "flex-start" }
 })
