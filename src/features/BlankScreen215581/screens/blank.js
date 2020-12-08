@@ -33,15 +33,8 @@ export default class Blank extends React.Component {
         color="#43dbc9"
         onPress={() => alert("Pressed!")}
       />
-      <Image
-        resizeMode="center"
-        source={{
-          uri:
-            "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/file_example_JPG_100kB_pxTL4FP.jpg"
-        }}
-      />
     </View>
   )
 }
 
-const styles = StyleSheet.create({ View_1: {}, Button_2: {}, Image_3: {} })
+const styles = StyleSheet.create({ View_1: {}, Button_2: {} })
