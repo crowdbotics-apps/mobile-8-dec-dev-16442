@@ -33,8 +33,12 @@ export default class Blank extends React.Component {
         color="#43dbc9"
         onPress={() => alert("Pressed!")}
       />
+      <Button
+        title="Press me!"
+        onPress={() => this.props.navigation.navigate("8dec415582")}
+      />
     </View>
   )
 }
 
-const styles = StyleSheet.create({ View_1: {}, Button_2: {} })
+const styles = StyleSheet.create({ View_1: {}, Button_2: {}, Button_3: {} })
