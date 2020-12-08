@@ -40,5 +40,5 @@ export default class Blank extends React.Component {
 
 const styles = StyleSheet.create({
   View_1: {},
-  Switch_2: { overflow: "scroll", alignSelf: "flex-start" }
+  Switch_2: { overflow: "visible", alignSelf: "flex-start" }
 })
