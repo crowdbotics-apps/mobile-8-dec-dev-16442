@@ -24,35 +24,9 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { Switch_2: true, Switch_3: true, Switch_4: true }
+  state = {}
 
-  render = () => (
-    <View>
-      <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
-        style={styles.Switch_2}
-        value={this.state.Switch_2}
-        onValueChange={nextChecked => this.setState({ Switch_2: nextChecked })}
-      />
-      <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
-        style={styles.Switch_3}
-        value={this.state.Switch_3}
-        onValueChange={nextChecked => this.setState({ Switch_3: nextChecked })}
-      />
-      <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
-        style={styles.Switch_4}
-        value={this.state.Switch_4}
-        onValueChange={nextChecked => this.setState({ Switch_4: nextChecked })}
-      />
-    </View>
-  )
+  render = () => <View />
 }
 
-const styles = StyleSheet.create({
-  View_1: {},
-  Switch_2: { alignSelf: "flex-start" },
-  Switch_3: { overflow: "hidden", alignSelf: "flex-start" },
-  Switch_4: { overflow: "visible", alignSelf: "flex-start" }
-})
+const styles = StyleSheet.create({ View_1: {} })
