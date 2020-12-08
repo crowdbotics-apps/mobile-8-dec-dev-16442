@@ -124,6 +124,87 @@ function* api_v1_signup_createWorker(action) {
 function* api_v1_signup_createWatcher() {
   yield takeEvery(types.API_V1_SIGNUP_CREATE, api_v1_signup_createWorker)
 }
+function* api_v1_userhgfhgf_listWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_userhgfhgf_list, action)
+    yield put(actions.api_v1_userhgfhgf_listSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_userhgfhgf_listFailed(err, action))
+  }
+}
+function* api_v1_userhgfhgf_listWatcher() {
+  yield takeEvery(types.API_V1_USERHGFHGF_LIST, api_v1_userhgfhgf_listWorker)
+}
+function* api_v1_userhgfhgf_createWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_userhgfhgf_create, action)
+    yield put(actions.api_v1_userhgfhgf_createSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_userhgfhgf_createFailed(err, action))
+  }
+}
+function* api_v1_userhgfhgf_createWatcher() {
+  yield takeEvery(
+    types.API_V1_USERHGFHGF_CREATE,
+    api_v1_userhgfhgf_createWorker
+  )
+}
+function* api_v1_userhgfhgf_readWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_userhgfhgf_read, action)
+    yield put(actions.api_v1_userhgfhgf_readSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_userhgfhgf_readFailed(err, action))
+  }
+}
+function* api_v1_userhgfhgf_readWatcher() {
+  yield takeEvery(types.API_V1_USERHGFHGF_READ, api_v1_userhgfhgf_readWorker)
+}
+function* api_v1_userhgfhgf_updateWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_userhgfhgf_update, action)
+    yield put(actions.api_v1_userhgfhgf_updateSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_userhgfhgf_updateFailed(err, action))
+  }
+}
+function* api_v1_userhgfhgf_updateWatcher() {
+  yield takeEvery(
+    types.API_V1_USERHGFHGF_UPDATE,
+    api_v1_userhgfhgf_updateWorker
+  )
+}
+function* api_v1_userhgfhgf_partial_updateWorker(action) {
+  try {
+    const result = yield call(
+      apiService.api_v1_userhgfhgf_partial_update,
+      action
+    )
+    yield put(actions.api_v1_userhgfhgf_partial_updateSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_userhgfhgf_partial_updateFailed(err, action))
+  }
+}
+function* api_v1_userhgfhgf_partial_updateWatcher() {
+  yield takeEvery(
+    types.API_V1_USERHGFHGF_PARTIAL_UPDATE,
+    api_v1_userhgfhgf_partial_updateWorker
+  )
+}
+function* api_v1_userhgfhgf_deleteWorker(action) {
+  try {
+    const result = yield call(apiService.api_v1_userhgfhgf_delete, action)
+    yield put(actions.api_v1_userhgfhgf_deleteSucceeded(result, action))
+  } catch (err) {
+    yield put(actions.api_v1_userhgfhgf_deleteFailed(err, action))
+  }
+}
+function* api_v1_userhgfhgf_deleteWatcher() {
+  yield takeEvery(
+    types.API_V1_USERHGFHGF_DELETE,
+    api_v1_userhgfhgf_deleteWorker
+  )
+}
 function* rest_auth_login_createWorker(action) {
   try {
     const result = yield call(apiService.rest_auth_login_create, action)
@@ -298,6 +379,12 @@ export default function* rootSaga() {
     api_v1_homepage_partial_updateWatcher,
     api_v1_login_createWatcher,
     api_v1_signup_createWatcher,
+    api_v1_userhgfhgf_listWatcher,
+    api_v1_userhgfhgf_createWatcher,
+    api_v1_userhgfhgf_readWatcher,
+    api_v1_userhgfhgf_updateWatcher,
+    api_v1_userhgfhgf_partial_updateWatcher,
+    api_v1_userhgfhgf_deleteWatcher,
     rest_auth_login_createWatcher,
     rest_auth_logout_listWatcher,
     rest_auth_logout_createWatcher,

@@ -1,6 +1,6 @@
 import axios from "axios"
 const mobiledecAPI = axios.create({
-  baseURL: "https://mobile-8-dec-dev-16442-prod.herokuapp.com/",
+  baseURL: "https://mobile-8-dec-dev-16442.botics.co/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_v1_customtext_list(action) {
@@ -40,6 +40,28 @@ function api_v1_login_create(action) {
 }
 function api_v1_signup_create(action) {
   return mobiledecAPI.post(`/api/v1/signup/`, null, { data: action.data })
+}
+function api_v1_userhgfhgf_list(action) {
+  return mobiledecAPI.get(`/api/v1/userhgfhgf/`)
+}
+function api_v1_userhgfhgf_create(action) {
+  return mobiledecAPI.post(`/api/v1/userhgfhgf/`, null, { data: action.data })
+}
+function api_v1_userhgfhgf_read(action) {
+  return mobiledecAPI.get(`/api/v1/userhgfhgf/${action.id}/`)
+}
+function api_v1_userhgfhgf_update(action) {
+  return mobiledecAPI.put(`/api/v1/userhgfhgf/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_userhgfhgf_partial_update(action) {
+  return mobiledecAPI.patch(`/api/v1/userhgfhgf/${action.id}/`, null, {
+    data: action.data
+  })
+}
+function api_v1_userhgfhgf_delete(action) {
+  return mobiledecAPI.delete(`/api/v1/userhgfhgf/${action.id}/`)
 }
 function rest_auth_login_create(action) {
   return mobiledecAPI.post(`/rest-auth/login/`, null, { data: action.data })
@@ -95,6 +117,12 @@ export const apiService = {
   api_v1_homepage_partial_update,
   api_v1_login_create,
   api_v1_signup_create,
+  api_v1_userhgfhgf_list,
+  api_v1_userhgfhgf_create,
+  api_v1_userhgfhgf_read,
+  api_v1_userhgfhgf_update,
+  api_v1_userhgfhgf_partial_update,
+  api_v1_userhgfhgf_delete,
   rest_auth_login_create,
   rest_auth_logout_list,
   rest_auth_logout_create,
