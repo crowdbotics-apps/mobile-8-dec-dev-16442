@@ -35,7 +35,11 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_2}
         onPress={nextChecked => this.setState({ CheckBox_2: nextChecked })}
       />
-      <Icon name="star" />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("SignupScreen315578")}
+      >
+        <Icon name="star" />
+      </TouchableOpacity>
       <CheckBox
         title="Checkbox"
         checked={this.state.CheckBox_4}
