@@ -54,10 +54,6 @@ export default class Blank extends React.Component {
         value={this.state.TextInput_9}
         onChangeText={nextValue => this.setState({ TextInput_9: nextValue })}
       />
-      <View style={styles.View_10}>
-        <View style={styles.View_11} />
-        <View style={styles.View_12} />
-      </View>
       <View>
         <View />
         <View />
@@ -76,9 +72,6 @@ const styles = StyleSheet.create({
   Text_7: {},
   Button_8: {},
   TextInput_9: {},
-  View_10: { flexDirection: "row" },
-  View_11: { width: 66 },
-  View_12: { width: 55 },
   View_13: {},
   View_14: {},
   View_15: {}
