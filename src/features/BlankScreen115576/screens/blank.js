@@ -62,6 +62,11 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_6}
         onPress={nextChecked => this.setState({ CheckBox_6: nextChecked })}
       />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("SignupScreen315578")}
+      >
+        <Icon name="star" style={styles.Icon_7} />
+      </TouchableOpacity>
     </View>
   )
 }
@@ -82,5 +87,17 @@ const styles = StyleSheet.create({
   },
   CheckBox_4: {},
   CheckBox_5: {},
-  CheckBox_6: {}
+  CheckBox_6: {},
+  Icon_7: {
+    width: 100,
+    height: 100,
+    alignSelf: "center",
+    borderColor: "#2dd248",
+    borderStyle: "dashed",
+    borderWidth: 4,
+    borderLeftWidth: 4,
+    borderRightWidth: 4,
+    borderTopWidth: 4,
+    borderBottomWidth: 4
+  }
 })
