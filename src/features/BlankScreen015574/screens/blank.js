@@ -24,16 +24,10 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { TextInput_4: "", TextInput_5: "", Switch_6: true }
+  state = { TextInput_4: "", TextInput_5: "", Switch_6: true, TextInput_9: "" }
 
   render = () => (
-    <ImageBackground
-      source={{
-        uri:
-          "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/2_FuyGJvj.jpg"
-      }}
-      style={styles.ImageBackground_1}
-    >
+    <ImageBackground style={styles.ImageBackground_1}>
       <Button title="Press me!" onPress={() => alert("Pressed!")} />
       <Text>Sample text content</Text>
       <TextInput
@@ -53,6 +47,21 @@ export default class Blank extends React.Component {
         value={this.state.Switch_6}
         onValueChange={nextChecked => this.setState({ Switch_6: nextChecked })}
       />
+      <Text>Sample text content</Text>
+      <Button title="Press me!" onPress={() => alert("Pressed!")} />
+      <TextInput
+        placeholder="Sample text input placeholder"
+        value={this.state.TextInput_9}
+        onChangeText={nextValue => this.setState({ TextInput_9: nextValue })}
+      />
+      <View style={styles.View_10}>
+        <View style={styles.View_11} />
+        <View style={styles.View_12} />
+      </View>
+      <View>
+        <View />
+        <View />
+      </View>
     </ImageBackground>
   )
 }
@@ -63,5 +72,14 @@ const styles = StyleSheet.create({
   Text_3: {},
   TextInput_4: {},
   TextInput_5: {},
-  Switch_6: { alignSelf: "flex-start" }
+  Switch_6: { alignSelf: "flex-start" },
+  Text_7: {},
+  Button_8: {},
+  TextInput_9: {},
+  View_10: { flexDirection: "row" },
+  View_11: { width: 17 },
+  View_12: { width: 104 },
+  View_13: {},
+  View_14: {},
+  View_15: {}
 })
