@@ -24,7 +24,12 @@ export default class Blank extends React.Component {
     }
   }
 
-  state = { CheckBox_2: false, CheckBox_4: false }
+  state = {
+    CheckBox_2: false,
+    CheckBox_4: false,
+    CheckBox_5: true,
+    CheckBox_6: true
+  }
 
   render = () => (
     <View>
@@ -45,6 +50,18 @@ export default class Blank extends React.Component {
         checked={this.state.CheckBox_4}
         onPress={nextChecked => this.setState({ CheckBox_4: nextChecked })}
       />
+      <CheckBox
+        title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        checked={this.state.CheckBox_5}
+        onPress={nextChecked => this.setState({ CheckBox_5: nextChecked })}
+      />
+      <CheckBox
+        title="Checkbox"
+        checked={this.state.CheckBox_6}
+        onPress={nextChecked => this.setState({ CheckBox_6: nextChecked })}
+      />
     </View>
   )
 }
@@ -63,5 +80,7 @@ const styles = StyleSheet.create({
     borderTopWidth: 4,
     borderBottomWidth: 4
   },
-  CheckBox_4: {}
+  CheckBox_4: {},
+  CheckBox_5: {},
+  CheckBox_6: {}
 })
