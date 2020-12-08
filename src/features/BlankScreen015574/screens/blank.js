@@ -47,6 +47,7 @@ export default class Blank extends React.Component {
         value={this.state.Switch_6}
         onValueChange={nextChecked => this.setState({ Switch_6: nextChecked })}
       />
+      <Slider value={50} minimumValue={0} maximumValue={100} />
     </View>
   )
 }
@@ -57,5 +58,6 @@ const styles = StyleSheet.create({
   Text_3: {},
   TextInput_4: {},
   TextInput_5: {},
-  Switch_6: { alignSelf: "flex-start" }
+  Switch_6: { alignSelf: "flex-start" },
+  Slider_7: {}
 })
